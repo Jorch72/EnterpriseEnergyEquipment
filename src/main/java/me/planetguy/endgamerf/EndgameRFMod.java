@@ -7,9 +7,11 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import me.planetguy.endgamerf.content.BlockMachineCore;
-import me.planetguy.endgamerf.content.BlockMultiblockFrame;
-import me.planetguy.endgamerf.content.ItemGigaCell;
+import me.planetguy.endgamerf.api.IMachineFrameBlock;
+import me.planetguy.endgamerf.mbmachines.BlockMachineCore;
+import me.planetguy.endgamerf.mbmachines.BlockMachinePort;
+import me.planetguy.endgamerf.mbmachines.BlockMultiblockFrame;
+import me.planetguy.endgamerf.test.ItemGigaCell;
 import me.planetguy.lib.prefab.BlockBase;
 import me.planetguy.lib.prefab.BlockContainerBase;
 import me.planetguy.lib.prefab.CreativeTabPrefab;
@@ -42,6 +44,8 @@ public class EndgameRFMod {
 		
 		BlockContainerBase.load(BlockMachineCore.class, map);
 		
+		BlockContainerBase.load(BlockMachinePort.class, map);
+		
 		ItemBase.load(ItemGigaCell.class, map);
 		
 	}
@@ -56,7 +60,7 @@ public class EndgameRFMod {
 	
 	
 	public static boolean isBlockAValidFrame(Block b) {
-		return b instanceof BlockMultiblockFrame;
+		return b instanceof IMachineFrameBlock;
 	}
 
 	public static boolean isBlockAValidCore(Block b) {

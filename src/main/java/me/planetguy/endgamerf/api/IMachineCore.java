@@ -12,7 +12,6 @@ public interface IMachineCore {
 	 * @param input the object passed in, in whatever type is specified.
 	 * @return whatever is rejected by the machine
 	 */
-	
 	public Object onReceive(String form, Object input);
 	
 	
@@ -22,5 +21,17 @@ public interface IMachineCore {
 	 * @return the iterator
 	 */
 	public Iterator outputs(String form);
+	
+	/**
+	 * Returns an iterator over the contents of this machine, in the given form
+	 * @param form the form you are extracting in; specifies the type.
+	 * @return the iterator
+	 */
+	public Iterator contents(String form);
+	
+	/**
+	 * @return the client-side GUI to display
+	 */
+	public IMachineGui getGui();
 
 }
