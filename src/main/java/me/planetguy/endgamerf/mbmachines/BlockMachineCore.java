@@ -7,7 +7,7 @@ import me.planetguy.lib.prefab.BlockContainerBase;
 
 public class BlockMachineCore extends BlockContainerBase{
 
-	protected BlockMachineCore() {
+	public BlockMachineCore() {
 		super(Material.iron, "blockMachineCore", TileEntityVaporizer.class); //TODO TE classes
 	}
 

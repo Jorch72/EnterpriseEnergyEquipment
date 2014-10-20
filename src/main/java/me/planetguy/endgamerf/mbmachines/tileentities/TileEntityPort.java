@@ -1,10 +1,11 @@
 package me.planetguy.endgamerf.mbmachines.tileentities;
 
 import me.planetguy.endgamerf.api.IMachineCore;
+import me.planetguy.endgamerf.api.IMachinePort;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 
-public class TileEntityPort extends TileEntity {
+public class TileEntityPort extends TileEntity implements IMachinePort{
 	
 	public IMachineCore machine;
 	
@@ -21,6 +22,9 @@ public class TileEntityPort extends TileEntity {
 			}
 		}
 	}
+
+	@Override
+	public void onOutputsUpdated() {}
 	
 
 }
