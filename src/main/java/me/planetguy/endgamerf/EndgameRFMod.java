@@ -7,6 +7,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import me.planetguy.endgamerf.api.IMachineCore;
 import me.planetguy.endgamerf.api.IMachineFrameBlock;
 import me.planetguy.endgamerf.mbmachines.BlockMachineCore;
 import me.planetguy.endgamerf.mbmachines.BlockMachinePort;
@@ -24,6 +25,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.IWorldAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.client.event.sound.SoundLoadEvent;
@@ -47,7 +49,6 @@ public class EndgameRFMod {
 		BlockContainerBase.load(BlockMachinePort.class, map);
 		
 		ItemBase.load(ItemGigaCell.class, map);
-		
 	}
 	
 	@EventHandler
@@ -63,14 +64,19 @@ public class EndgameRFMod {
 		return b instanceof IMachineFrameBlock;
 	}
 
-	public static boolean isBlockAValidCore(Block b) {
-		return b==Blocks.coal_block;
+	public static boolean isBlockAValidCore(TileEntity te) {
+		return te instanceof IMachineCore;
 	}
 	
-	public static void playSound(World w, double x, double y, double z, String name, float vol, float pitch){
+	/**
+	 * Plays the named (locally-named) sound at the given location.
+	 * @param volume the volume relative to the original file; 1.0 is no change
+	 * @param pitch the pitch (and length compression) relative to the original file; 1.0 is no change
+	 */
+	public static void playSound(World w, double x, double y, double z, String name, float volume, float pitch){
 		for(Object o:w.worldAccesses){
 			IWorldAccess iwa=(IWorldAccess) o;
-			iwa.playSound(Properties.modID+":"+name, x, y, z, vol, pitch);
+			iwa.playSound(Properties.modID+":"+name, x, y, z, volume, pitch);
 		}
 	}
 

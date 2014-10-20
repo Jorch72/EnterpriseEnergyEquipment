@@ -5,6 +5,7 @@ import java.util.List;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import me.planetguy.endgamerf.EndgameRFMod;
@@ -40,7 +41,7 @@ public class BlockMultiblockFrame extends BlockContainerBase implements IMachine
 		//filter by center blocks
 		EnumMultiblock result = null;
 		for(EnumMultiblock mb:e){
-			Block b=w.getBlock(x+mb.offsetsToInteriorBlock[0], y+mb.offsetsToInteriorBlock[1], z+mb.offsetsToInteriorBlock[2]);
+			TileEntity b=w.getTileEntity(x+mb.offsetsToInteriorBlock[0], y+mb.offsetsToInteriorBlock[1], z+mb.offsetsToInteriorBlock[2]);
 			if(EndgameRFMod.isBlockAValidCore(b)){
 				if(result == null){
 					result=mb;

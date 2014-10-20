@@ -4,6 +4,9 @@ import java.util.Iterator;
 
 import net.minecraft.item.ItemStack;
 
+/**
+ * Indicates that the TileEntity can be used as the core of a machine
+ */
 public interface IMachineCore {
 	
 	/**
