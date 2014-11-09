@@ -2,7 +2,7 @@ package me.planetguy.endgamerf.mbmachines.tileentities;
 
 import java.util.Iterator;
 
-import me.planetguy.endgamerf.api.Types;
+import me.planetguy.endgamerf.api.v1.Types;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.ItemStack;

@@ -1,7 +1,7 @@
 package me.planetguy.endgamerf.mbmachines.tileentities;
 
 import cofh.api.energy.IEnergyHandler;
-import me.planetguy.endgamerf.api.Types;
+import me.planetguy.endgamerf.api.v1.Types;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 

@@ -9,7 +9,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import me.planetguy.endgamerf.EndgameRFMod;
-import me.planetguy.endgamerf.api.IMachineFrameBlock;
+import me.planetguy.endgamerf.api.v1.IMachineFrameBlock;
 import me.planetguy.endgamerf.mbmachines.tileentities.TileEntityMultiblockFrame;
 import me.planetguy.lib.multiblock.EnumMultiblock;
 import me.planetguy.lib.prefab.BlockBase;

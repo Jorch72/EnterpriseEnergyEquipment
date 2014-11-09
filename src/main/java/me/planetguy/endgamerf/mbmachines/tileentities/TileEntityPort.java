@@ -1,7 +1,7 @@
 package me.planetguy.endgamerf.mbmachines.tileentities;
 
-import me.planetguy.endgamerf.api.IMachineCore;
-import me.planetguy.endgamerf.api.IMachinePort;
+import me.planetguy.endgamerf.api.v1.IMachineCore;
+import me.planetguy.endgamerf.api.v1.IMachinePort;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 

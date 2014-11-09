@@ -1,0 +1,8 @@
+itemGroup.planetguy_EndgameRF=Enterprise Energy Engineering
+
+tile.blockMachineCore.name=Machine Core (Vaporizer)
+
+tile.mbMachinePort.name=Machine Port (Energy)
+tile.mbMachinePort.1.name=Machine Port (Vaporized Items)
+
+tile.multiblockFrame.name=Machine Casing
